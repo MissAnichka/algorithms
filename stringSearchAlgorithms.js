@@ -28,20 +28,12 @@ function patternSearch(string, substring) {
     return matches;
 }
 
-function hash(str) {
-    let hashedNum = 0;
-    for (let i = 0; i < str.length; i++) {
-        hashedNum += str.charCodeAt(i) * 128 ** str.length - i;
-    }
-    return hashedNum;
-}
-
 console.log("My String Search Algo =", patternSearch(haystack, needle));
 
 function rabinKarp(string, substring) {
-    const hashedSubString = rabinKarpHash(substring);
+    const hashedSubString = hash(substring);
     for (let i = 0; i <= string.length - substring.length; i++) {
-        let checkForMatch = rabinKarpHash(string, i, i + substring.length)
+        let checkForMatch = hash(string, i, i + substring.length)
         if (checkForMatch === hashedSubString) {
             return i;
         }
@@ -49,7 +41,7 @@ function rabinKarp(string, substring) {
     return -1;
 }
 
-function rabinKarpHash(str, left, right) {
+function hash(str, left, right) {
     if(!left) left = 0;
     if(!right) right = str.length;
     let hashedNum = 0;
@@ -60,4 +52,4 @@ function rabinKarpHash(str, left, right) {
 }
 
 console.log("Rabin Karp Algo =", rabinKarp(haystack, needle));
-console.log("checking hash", rabinKarpHash("some n e e d l e", 5), rabinKarpHash("n e e d l e"))
+// console.log("checking hash", hash("some n e e d l e", 5), hash("n e e d l e"))
