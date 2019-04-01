@@ -86,7 +86,8 @@ const needles = [
 ]
 const haystacks = [
     "aaabbbcccabcabaabccbadgfjedsabc",
-    "i n a h a y s t a c k a n e e d l e i n a n e e d l e s a n d somuchmore!", "dsh#$!*aiehwfikjanc#$!*kafhjief!#$%^%#$!*$%&^#$!**&(",
+    "i n a h a y s t a c k a n e e d l e i n a n e e d l e s a n d somuchmore!", 
+    "dsh#$!*aiehwfikjanc#$!*kafhjief!#$%^%#$!*$%&^#$!**&(",
     "bbbbb"
 ]
 
