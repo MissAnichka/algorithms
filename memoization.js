@@ -1,6 +1,7 @@
 /**
- * Memoization - concept of caching function call results for future use if we come across the same parameters again
- * to speed up our algorithm. Used with backtracking which often require recursive calls,
+ * Memoization - concept of caching (saving) function call results for future use 
+ * if we come across the same parameters again to speed up our algorithm. 
+ * Used with backtracking which often require recursive calls,
  * this makes up Dynamic Programming.
  * @param {*} cb 
  */
